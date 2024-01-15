@@ -14,6 +14,7 @@ namespace Com.DanLiris.Service.Purchasing.Lib.AutoMapperProfiles
                 .ForPath(d => d.Bank.Id, opt => opt.MapFrom(s => s.BankId))
                 .ForPath(d => d.Bank.BankCode, opt => opt.MapFrom(s => s.BankCode))
                 .ForPath(d => d.Bank.AccountCOA, opt => opt.MapFrom(s => s.BankAccountCOA))
+                .ForPath(d => d.Bank.AccountCurrencyId, opt => opt.MapFrom(s => s.BankCurrencyId))
                 .ForPath(d => d.Bank.AccountName, opt => opt.MapFrom(s => s.BankAccountName))
                 .ForPath(d => d.Bank.AccountNumber, opt => opt.MapFrom(s => s.BankAccountNumber))
                 .ForPath(d => d.Bank.BankName, opt => opt.MapFrom(s => s.BankName))
