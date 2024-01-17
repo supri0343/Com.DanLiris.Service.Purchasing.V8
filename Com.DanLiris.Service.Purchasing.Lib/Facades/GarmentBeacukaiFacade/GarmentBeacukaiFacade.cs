@@ -664,7 +664,7 @@ namespace Com.DanLiris.Service.Purchasing.Lib.Facades.GarmentBeacukaiFacade
                             });
             var Ids = QueryData.Select(a => a.Id).Distinct().ToList();
             var data = this.dbSet.Where(o => Ids.Contains(o.Id))
-                .Select(bc => new { bc.Id, bc.BeacukaiNo, bc.BeacukaiDate, bc.CustomsType});
+                .Select(bc => new { bc.Id, bc.BeacukaiNo, bc.BeacukaiDate, bc.CustomsType}).ToList();
 
             List<object> ListData = new List<object>();
             foreach(var item in QueryData)
